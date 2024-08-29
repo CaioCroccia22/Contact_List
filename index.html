@@ -3,36 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="form-content">
-        <form action="">
-            <label for="name">Write your name:</label>
-            <input type="text" id="name" name="name"  required/>
-
-            <label for="phone_number">Write your name:</label>
-            <input type="text" id="phone_number" name="phone_number"  required/>
-        </form>
-        <button>Clique aqui</button>
-        <table>
-            <thead>
-                <tr>
-                    <td>Nome</td>
-                    <td>Telefone</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        Caio Croccia
-                    </td>
-                    <td>
-                        1399747365
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="main-content">
+       <div class="form-content">
+            <form action="">
+                <div class="name-input">
+                    <label for="name">Write your name:</label>
+                    <input type="text" id="name" name="name"  required/>
+                </div>
+                <div class="phone-input">
+                    <label for="phone_number">Write your phone:</label>
+                    <input type="text" id="phone_number" name="phone_number"  required/>
+                </div>
+            </form> 
+            <button class="btn-submit">Submit</button>
+            <table >
+                <thead>
+                    <tr>
+                        <td>Nome</td>
+                        <td>Telefone</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Caio Croccia
+                        </td>
+                        <td>
+                            1399747365
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 </html>
