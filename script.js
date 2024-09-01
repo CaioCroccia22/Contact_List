@@ -1,6 +1,8 @@
 // console.log('teste inicial');
 
 const contactForm = document.getElementById('contact-form');
+const tableRow = document.getElementById('table-row');
+
 
 contactForm.addEventListener('submit', function(e){
     e.preventDefault();
@@ -11,10 +13,16 @@ contactForm.addEventListener('submit', function(e){
 });
 
 function addTable(name, phone){
-    const tableRow = document.getElementById('table-row');
-    tableRow.innerHTML += `<tr>
-        <td>${name}</td>
-        <td>${phone}</td>
-    </tr>'`
+    const maxRow = 5;
+    if(tableRow.rows.length <= maxRow){
+        tableRow.innerHTML += `<tr>
+            <td>${name}</td>
+            <td>${phone}</td>
+        </tr>`;
+    }
+    else{
+        alert('Máximo de linhas já atingido !!')
+    }
+    contactForm.reset();
 
 }
